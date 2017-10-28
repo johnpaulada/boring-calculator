@@ -1,0 +1,31 @@
+@import 'reset';
+@import 'layout';
+@import 'colors';
+
+@media (max-width: 720px) {
+    #calculator {
+        width: 100vw;
+        height: 100vh;
+        background-color: #FAFAFA;
+    }
+}
+
+@media (min-width: 721px) {
+    #calculator {
+        width: 30vw;
+        height: 90vh;
+        background-color: #FAFAFA;
+    }
+}
+
+#display {
+    flex: 2;
+}
+
+#operations {
+    flex: 1;
+}
+
+#numbers {
+    flex: 3;
+}

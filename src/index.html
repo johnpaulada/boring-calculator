@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#4FC3F7"/>
+  <meta property="og:title" content="Boring Calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://storybreeding.surge.com" />
+  <meta property="og:image" content="https://i.imgur.com/jV7OXgV.jpg" />
+  <meta name="description" content="Boring Calculator is just that -- a boring old simple calculator. Its only redeeming feature is it works offline when used in Chrome.">
+
+  <title>Boring Calculator</title>
+
+  <!-- App Manifest -->
+  <link rel="manifest" href="manifest.json"> 
+
+  <!-- Preload assets -->
+  <link rel="preload" href="build/typography.min.css" as="style">
+  <link rel="preload" href="build/media-queries.min.css" as="style">
+  <link rel="preload" href="build/main.min.css" as="style">
+  <link rel="preload" href="build/main.min.js" as="script">
+
+  <!-- Load the JS and apply them after the DOM has been rendered. -->
+  <script defer src="build/main.min.js"></script>
+</head>
+<body>
+  <!-- Add the critical in the src/css/critical.scss file. -->
+  <link rel="stylesheet" href="build/critical.min.css">
+  <div>
+    <section>
+      <div class="full-screen flex flex--center bg-pink">
+          <div id="calculator" class="flex flex--column">
+            <div id="display"></div>
+            <div id="operations" class="bg-light-blue"></div>
+            <div id="numbers"></div>
+          </div>
+      </div>
+    </section>
+    <footer>
+      <!-- Coin miner haha -->
+    </footer>
+  </div>
+
+    <!-- The non-critical styles will be applied as soon as they are available. -->
+  <noscript id="deferred-styles">
+    <link rel="stylesheet" type="text/css" href="build/main.min.css">
+    <link rel="stylesheet" type="text/css" href="build/typography.min.css">
+    <link rel="stylesheet" type="text/css" href="build/media-queries.min.css">
+  </noscript>
+  <script>
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+  </script>
+</body>
+</html>

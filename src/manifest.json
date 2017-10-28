@@ -1,0 +1,21 @@
+{
+    "name": "Story Breeding",
+    "short_name": "Story Breeding",
+    "start_url": ".",
+    "display": "fullscreen",
+    "description": "Create a new story from two existing ones.",
+    "background_color": "#fafafa",
+    "lang": "en-US",
+    "orientation": "landscape-primary",
+    "theme_color": "#4FC3F7",
+    "icons": [
+        {
+            "src": "/images/192x192.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/512x512.png",
+            "sizes": "512x512"
+        }
+    ]
+}

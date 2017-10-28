@@ -1,0 +1,29 @@
+.flex {
+    display: flex;
+}
+
+.flex--column {
+    flex-direction: column;
+}
+
+.flex--center {
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-image--full {
+    background-size: cover;
+}
+
+.bg-image--center {
+    background-position: center center;
+}
+
+.bg-image--fixed {
+    background-attachment: fixed;
+}
+
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+}

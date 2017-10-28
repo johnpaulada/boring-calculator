@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'),
+       url('../fonts/raleway/Raleway-Regular.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-weight: bold;
+    src: local('Raleway'),
+         url('../fonts/raleway/Raleway-Bold.ttf') format('truetype')
+  }
+
+h1, h2, h3, h4 {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: calc(32pt + 3vw);
+}
+
+.center {
+    text-align: center;
+}

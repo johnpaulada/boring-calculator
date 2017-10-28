@@ -32,14 +32,46 @@
     <section>
       <div class="full-screen flex flex--center bg-pink">
           <div id="calculator" class="flex flex--column">
-            <div id="display"></div>
-            <div id="operations" class="bg-light-blue"></div>
-            <div id="numbers"></div>
+            <div id="display" class="flex flex--column flex--end">
+              <p id="query" class="right">1 + 2 * 3 </p>
+              <p id="answer" class="right">7</p>
+            </div>
+            <div id="operations" class="bg-light-blue flex flex--column flex--axis--center">
+                <div class="flex flex--around">
+                    <div class="ops-button">C</div>
+                    <div class="ops-button">+</div>
+                    <div class="ops-button">-</div>
+                    <div class="ops-button">x</div>
+                    <div class="ops-button">/</div>
+                </div>
+            </div>
+            <div id="numbers" class="bg-black flex flex--column flex--around">
+              <div class="number-row flex flex--around">
+                <div class="number-button">7</div>
+                <div class="number-button">8</div>
+                <div class="number-button">9</div>
+              </div>
+              <div class="number-row flex flex--around">
+                <div class="number-button">4</div>
+                <div class="number-button">5</div>
+                <div class="number-button">6</div>
+              </div>
+              <div class="number-row flex flex--around">
+                <div class="number-button">1</div>
+                <div class="number-button">2</div>
+                <div class="number-button">3</div>
+              </div>
+              <div class="number-row flex flex--around">
+                <div class="number-button">.</div>
+                <div class="number-button">0</div>
+                <div id="equals">=</div>
+              </div>
+            </div>
           </div>
       </div>
     </section>
     <footer>
-      <!-- Coin miner haha -->
+      <!-- Monetization? -->
     </footer>
   </div>
 

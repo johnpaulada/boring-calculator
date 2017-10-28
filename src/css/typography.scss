@@ -10,16 +10,27 @@
     font-family: 'Raleway';
     font-weight: bold;
     src: local('Raleway'),
-         url('../fonts/raleway/Raleway-Bold.ttf') format('truetype')
+            url('../fonts/raleway/Raleway-Bold.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'),
+         url('../fonts/roboto/Roboto-Regular.ttf') format('truetype')
+  }
+  
+  @font-face {
+      font-family: 'Roboto';
+      font-weight: bold;
+      src: local('Roboto'),
+              url('../fonts/roboto/Roboto-Bold.ttf') format('truetype')
   }
 
 h1, h2, h3, h4 {
     font-family: "Raleway", sans-serif;
     font-weight: bold;
-}
-
-h2 {
-    font-size: calc(32pt + 3vw);
 }
 
 .center {

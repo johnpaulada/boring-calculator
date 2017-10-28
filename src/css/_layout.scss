@@ -11,6 +11,18 @@
     align-items: center;
 }
 
+.flex--axis--center {
+    justify-content: center;
+}
+
+.flex--end {
+    justify-content: flex-end;
+}
+
+.flex--around {
+    justify-content: space-around;
+}
+
 .bg-image--full {
     background-size: cover;
 }

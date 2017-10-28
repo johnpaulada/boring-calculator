@@ -6,7 +6,6 @@
     #calculator {
         width: 100vw;
         height: 100vh;
-        background-color: #FAFAFA;
     }
 }
 
@@ -14,12 +13,21 @@
     #calculator {
         width: 30vw;
         height: 90vh;
-        background-color: #FAFAFA;
     }
 }
 
+.right {
+    text-align: right;
+}
+
+#calculator {
+    background-color: #FAFAFA;
+    box-shadow: 0 0 50px #333;
+}
+
 #display {
-    flex: 2;
+    flex: 3;
+    padding: 0 20px;
 }
 
 #operations {
@@ -27,5 +35,58 @@
 }
 
 #numbers {
-    flex: 3;
+    flex: 6;
+}
+
+#query {
+    font-family: "Roboto", sans-serif;
+    font-size: 2em;
+    color: #BDBDBD;
+    margin: 0;
+}
+
+#answer {
+    font-family: "Roboto", sans-serif;
+    font-size: 5em;
+    color: #424242;
+    margin: 0;
+}
+
+#equals {
+    color: #DCE775;
+    font-size: 3em;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+#equals:hover {
+    color: #F0F4C3;
+    text-shadow: 0 0 30px #F0F4C3;
+}
+
+.number-button {
+    color: #757575;
+    font-size: 3em;
+    font-family: "Roboto", sans-serif;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+.number-button:hover {
+    color: #FAFAFA;
+    text-shadow: 0 0 30px #FAFAFA;
+}
+
+.ops-button {
+    color: #B3E5FC;
+    font-size: 3em;
+    font-family: "Roboto", sans-serif;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+.ops-button:hover {
+    color: #FAFAFA;
+    text-shadow: 0 0 30px #FAFAFA;
 }

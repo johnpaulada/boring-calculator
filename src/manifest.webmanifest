@@ -1,9 +1,9 @@
 {
-    "name": "Story Breeding",
-    "short_name": "Story Breeding",
+    "name": "Boring Calculator",
+    "short_name": "Boring Calculator",
     "start_url": ".",
     "display": "fullscreen",
-    "description": "Create a new story from two existing ones.",
+    "description": "Boring old simple calculator written in Javascript and works offline.",
     "background_color": "#fafafa",
     "lang": "en-US",
     "orientation": "landscape-primary",

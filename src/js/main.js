@@ -33,7 +33,7 @@ const tokenize = input => {
         createToken  = (type, value = null) => generateToken(type, input.substring(start, current), value),
         eat          = () => input.charAt(current++),
         peek         = () => isAtEnd() ? null : input.charAt(current),
-        peekNext     = () => (current + 1) >= length ? null : input.charAt(current + 1),
+        peekNext     = () => (current + 1) >= INPUT_LENGTH ? null : input.charAt(current + 1),
         eatNumber    = () => { while (peek() && isDigit(peek())) eat() }
 
   const number = () => {

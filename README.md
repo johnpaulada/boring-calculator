@@ -9,5 +9,8 @@ Built on top of the [Project Savitar](https://github.com/johnpaulada/project-sav
 ## Screenshot
 ![Banner](banner.png)
 
+## How to build
+Check [Project Savitar](https://github.com/johnpaulada/project-savitar) for instructions for first time build. After building, an `app` directory will be created. Open `index.html` to use.
+
 ## License
 MIT

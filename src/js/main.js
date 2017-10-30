@@ -75,8 +75,6 @@ const parse = tokens => {
   let start   = 0,
       current = 0
 
-  const TOKENS_SIZE = tokens.length
-
   const peek     = () => tokens[current],
         previous = () => tokens[current - 1],
         eat      = () => tokens[current++],

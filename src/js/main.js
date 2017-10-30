@@ -13,6 +13,10 @@ const NUMBER = Symbol.for('NUMBER'),
       DIVIDE = Symbol.for('DIVIDE'),
       EOF    = Symbol.for('EOF')
 
+// Define node types
+const BINARY  = Symbol.for('BINARY'),
+      LITERAL = Symbol.for('LITERAL')
+
 const tokenTypes = {'+': PLUS, '-': MINUS, 'x': TIMES, '/': DIVIDE}
 const generateToken = (type, lexeme, value) => ({type, lexeme, value})
 const printToken = token => `${token.type}: ${lexeme}`
@@ -30,7 +34,7 @@ const tokenize = input => {
         eat          = () => input.charAt(current++),
         peek         = () => isAtEnd() ? null : input.charAt(current),
         peekNext     = () => (current + 1) >= length ? null : input.charAt(current + 1),
-        eatNumber    = () => { while (isDigit(peek()) && peek() !== null) eat() }
+        eatNumber    = () => { while (peek() && isDigit(peek())) eat() }
 
   const number = () => {
     eatNumber()
@@ -92,7 +96,7 @@ const parse = tokens => {
 
   const createBinary = (left, operator, right) => {
     return {
-      type: "binary",
+      type: BINARY,
       value: operator,
       left, right
     }
@@ -100,7 +104,7 @@ const parse = tokens => {
 
   const createLiteral = value => {
     return {
-      type: "literal",
+      type: LITERAL,
       value
     }
   }
@@ -141,10 +145,10 @@ const parse = tokens => {
 }
 
 const evaluate = (ast) => {
-  const left = ast.type === 'literal' ? null : evaluate(ast.left)
-  const right = ast.type === 'literal' ? null : evaluate(ast.right)
+  const left = ast.type === LITERAL ? null : evaluate(ast.left)
+  const right = ast.type === LITERAL ? null : evaluate(ast.right)
 
-  if (ast.type === 'binary') {
+  if (ast.type === BINARY) {
     switch(ast.value.type) {
       case PLUS:
         return left + right
